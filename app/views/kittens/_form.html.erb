@@ -1,7 +1,7 @@
 <%= form_with model: @kitten, local: true do |f| %>
   <% @kitten.errors.full_messages.each do |msg| %>
     <p><%= msg %></p>
-  <% end%>
+  <% end %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :age %>
