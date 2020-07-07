@@ -1,0 +1,11 @@
+<h1>Kittens - index</h1>
+<%= link_to 'Add a Kitten', new_kitten_path %>
+<% @kittens.each do |kitty| %>
+  <ul>
+    <li>Name: <%= link_to kitty.name, kitten_path(kitty.id) %></li>
+    <li>Age: <%= kitty.age %></li>
+    <li>Cuteness: <%= kitty.cuteness %></li>
+    <li>Softness: <%= kitty.softness %></li>
+  </ul>
+  <hr />
+<% end %>
