@@ -1,11 +1,14 @@
 <h1>Kittens - index</h1>
-<%= link_to 'Add a Kitten', new_kitten_path %>
+<h3><%= link_to 'Add a Kitten', new_kitten_path %></h3>
+
 <% @kittens.each do |kitty| %>
   <ul>
-    <li>Name: <%= link_to kitty.name, kitten_path(kitty.id) %></li>
+    <li>Name: <%= kitty.name %></li>
     <li>Age: <%= kitty.age %></li>
     <li>Cuteness: <%= kitty.cuteness %></li>
     <li>Softness: <%= kitty.softness %></li>
   </ul>
+  <%= link_to 'Edit', edit_kitten_path(kitty) %>
+  <%= link_to 'Delete', kitten_path(kitty), method: :delete %>
   <hr />
 <% end %>

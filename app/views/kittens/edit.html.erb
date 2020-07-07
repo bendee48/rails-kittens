@@ -1,3 +1,6 @@
 <h1>Edit Kitty</h1>
 
-<%= render 'form' %>
+<%= render 'form' %><br />
+
+<%= link_to 'Home', root_path %>
+<%= link_to 'Delete', kitten_path(@kitten), method: :delete %>
